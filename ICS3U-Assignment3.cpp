@@ -4,18 +4,22 @@
 // Created on : October 2022
 // ICS3U-Assignment3.cpp File, 3X+1 problem in C++.
 
+#include <iostream>
 
 int main() {
     // creating variables
-    int number;
-    int step;
+    int initialNumber = 0;
+    int number = 0;
+    int step = 0;
 
     // input
-    std::cout << "Type in any number that you want to see go through the 3X + 1 loop: ";
-    std::cin >> number;
+    std::cout << "Type in any natural number that you want to see go through the 3X + 1 problem: ";
+    std::cin >> initialNumber;
+    number = initialNumber;
+
     if (number < 1) {
-        std::cout << "\nYou can only use positives for 3X+1 problem.\n";
-        exit (EXIT_FAILURE);
+        std::cout << "\nYou can only use natural numbers for 3X+1 problem.\n";
+        exit(EXIT_FAILURE);
     }
 
     // process and output
@@ -23,19 +27,16 @@ int main() {
         if (number % 2) {
             std::cout << number << " × 3 + 1 = ";
             number = number * 3 + 1;
-            std::cout << number;
-        }
-        else {
+        } else {
             std::cout << number << " : 2 = ";
             number = number / 2;
-            std::cout << number;
         }
-        step += 1;
-        std::cout << "\nstep #" << step << ".\n\n";
+        std::cout << number;
+        std::cout << "\nstep #" << ++step << ".\n\n";
     }
-    std::cout << "\nThe number has stopped on the 1 and 2 infinity loop.";
-    std::cout << "\n(1×3+1=4, 4:2=2, 2:2=1)";
+    std::cout << "\nThe 3X + 1 problem has been resolved in "
+              << step << " steps, starting from number " << initialNumber << ".";
 
     std::cout << "\n\nDone.\n";
-    exit (EXIT_SUCCESS);
+    exit(EXIT_SUCCESS);
 }
