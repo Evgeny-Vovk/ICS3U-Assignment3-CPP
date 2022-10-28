@@ -32,7 +32,7 @@ int main() {
                 number = number / 2;
             }
             std::cout << number;
-            std::cout << "\nstep #" << ++step << ".\n\n";
+            std::cout << "\nstep " << ++step << ".\n\n";
         }
         std::cout << "\nThe 3X + 1 problem has been resolved in "
                   << step << " steps, starting from number " << initialNumber << ".";
