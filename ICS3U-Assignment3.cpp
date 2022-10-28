@@ -13,21 +13,20 @@ int main() {
     int step = 0;
 
     // input
-    std::cout << "Type in any natural number that you want to see go through the 3X + 1 problem: ";
+    std::cout << "Type in any natural number ";
+    std::cout << "that you want to see go through the 3X + 1 problem: ";
     std::cin >> initialNumber;
     number = initialNumber;
 
     // process and output
     if (initialNumber < 1) {
         std::cout << "\nYou can only use natural numbers for 3X+1 problem.\n";
-    }
-    else {
+    } else {
         while (number > 1) {
             if (number % 2) {
                 std::cout << number << " × 3 + 1 = ";
                 number = number * 3 + 1;
-            }
-            else {
+            } else {
                 std::cout << number << " : 2 = ";
                 number = number / 2;
             }
@@ -35,7 +34,8 @@ int main() {
             std::cout << "\nstep " << ++step << ".\n\n";
         }
         std::cout << "\nThe 3X + 1 problem has been resolved in "
-                  << step << " steps, starting from number " << initialNumber << ".";
+                  << step << " steps, starting from number "
+                  << initialNumber << ".";
     }
 
     std::cout << "\n\nDone.\n";
